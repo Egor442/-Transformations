@@ -9,7 +9,7 @@ public class Rotator : MonoBehaviour
 
     private void OnValidate()
     {
-        UserUtilits.Validate(ref _currentSpeedRotating, _minSpeedRotation, _maxSpeedRotation);
+        _currentSpeedRotating = Mathf.Clamp(_currentSpeedRotating, _minSpeedRotation, _maxSpeedRotation);
     }
 
     private void Update()

@@ -10,7 +10,7 @@ public class Mover : MonoBehaviour
 
     private void OnValidate()
     {
-        UserUtilits.Validate(ref _currentSpeed, _minSpeed, _maxSpeed);
+        _currentSpeed = Mathf.Clamp(_currentSpeed, _minSpeed, _maxSpeed);
     }
 
     private void Update()

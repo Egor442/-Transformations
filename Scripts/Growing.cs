@@ -9,7 +9,7 @@ public class Growing : MonoBehaviour
 
     private void OnValidate()
     {
-        UserUtilits.Validate(ref _currentGrowingSpeed, _minGrowingSpeed, _maxGrowingSpeed);
+        _currentGrowingSpeed = Mathf.Clamp(_currentGrowingSpeed, _minGrowingSpeed, _maxGrowingSpeed);
     }
 
     private void Update()
